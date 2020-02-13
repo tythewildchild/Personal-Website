@@ -133,7 +133,7 @@ div.last{
 }
 .formFlex li{
     display:flex;
-    flex-warp:wrap;
+    flex-wrap:wrap;
     align-items:center;
 }
 
