@@ -67,6 +67,23 @@ nav img:hover{
     border-bottom: 5px dotted;
 }
 
+.projectContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width:100%;
+    background-color:purple;
+}
+
+.projectContainer div{
+    display:flex;
+    width: 30%;
+    height: 200px;
+    background-color: gray;
+}
+
 #aboutMe{
     display:none;
 }
