@@ -46,7 +46,7 @@ nav ul li{
 }
 
 nav ul li:hover{
-    background-color:coral;
+    background-color:rgb(255, 216, 203);
     cursor:pointer;
 }
 
@@ -70,17 +70,19 @@ nav img:hover{
 .projectContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: space-around;
     flex-wrap: wrap;
     width:100%;
     background-color:purple;
 }
 
-.projectContainer div{
+.projectContainer article{
     display:flex;
+    justify-content:center;
+    align-items:center;
     width: 30%;
-    height: 200px;
+    height: 250px;
     background-color: gray;
 }
 
