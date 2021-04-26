@@ -56,7 +56,9 @@ nav img{
 nav img:hover{
     cursor:pointer;
 }
-
+#pingpong:hover{
+    cursor:pointer;
+}
 .body{
     padding:20px;
     display:flex;
