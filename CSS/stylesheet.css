@@ -60,6 +60,7 @@ nav img:hover{
     cursor:pointer;
 }
 .body{
+    min-height: 800px;
     padding:20px;
     display:flex;
     align-items:center;
@@ -85,18 +86,19 @@ nav img:hover{
     height: 200px;
     background-color: gray;
 }
-
 #aboutMe{
     display:none;
 }
 #resume{
     display:none;
 }
-
 #hobbies{
     display:none;
 }
-#form{
+#academics{
+    display:none;
+}
+#projects{
     display:none;
 }
 
