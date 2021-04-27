@@ -3,8 +3,8 @@ var btn2 = document.getElementById("btn2");
 var btn3 = document.getElementById("btn3");
 var btn4 = document.getElementById("btn4");
 var btn5 = document.getElementById("btn5");
-
-
+let pingPong = document.getElementById("pingpong");
+let snake = document.getElementById("snake");
 
 
 btn1.addEventListener("click", function(){
@@ -94,4 +94,16 @@ btn5.addEventListener("click", function(){
     projects.style.display = "flex";
     academics.style.display = "none";
 
+});
+
+pingPong.addEventListener("click", function(evt){
+    evt.preventDefault();
+    window.location.assign("pingpong.html");
+    return false;
+});
+
+snake.addEventListener("click", function(evt){
+    evt.preventDefault();
+    window.location.assign("snake.html");
+    return false;
 });
