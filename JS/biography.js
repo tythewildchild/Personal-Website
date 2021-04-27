@@ -5,6 +5,8 @@ var btn4 = document.getElementById("btn4");
 var btn5 = document.getElementById("btn5");
 let pingPong = document.getElementById("pingpong");
 let snake = document.getElementById("snake");
+let politicalHub = document.getElementById("politicalHub");
+
 
 
 btn1.addEventListener("click", function(){
@@ -105,5 +107,11 @@ pingPong.addEventListener("click", function(evt){
 snake.addEventListener("click", function(evt){
     evt.preventDefault();
     window.location.assign("snake.html");
+    return false;
+});
+
+politicalHub.addEventListener("click", function(evt){
+    evt.preventDefault();
+    window.location.assign("PoliticalHub/html/index.html");
     return false;
 });
