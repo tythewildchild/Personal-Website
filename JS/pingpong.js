@@ -16,7 +16,7 @@ const ball = {
     color : "WHITE"
 }
 const paddle1 = {
-    x : 0, 
+    x : 10, 
     y : (canvas.height - 100)/2, 
     width : 10,
     height : 100,
@@ -24,7 +24,7 @@ const paddle1 = {
     color : "WHITE"
 }
 const paddle2 = {
-    x : canvas.width - 10, 
+    x : canvas.width - 20, 
     y : (canvas.height - 100)/2, 
     width : 10,
     height : 100,
