@@ -93,10 +93,14 @@ function update(){
         paddle1.score++;
         // paddle2Score.play();
         resetBall();
+        ball.velocityX = 5;
+        ball.velocityY = 5;
     }else if( ball.x + ball.radius > canvas.width){
         paddle2.score++;
         // paddle1Score.play();
         resetBall();
+        ball.velocityX = 5;
+        ball.velocityY = 5;
     }
     
     // the ball has a velocity
