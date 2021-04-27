@@ -30,12 +30,11 @@ function Snake(){
         for(let i = 0; i < this.tail.length - 1; i++){
             this.tail[i] = this.tail[i+1];
         }
-
         this.tail[this.score - 1] = {x: this.x, y:this.y};
-
         snake.x += snake.xSpeed;
         snake.y += snake.ySpeed;
-
+        this.eat();
+        this.collision();
         //Canvas Collision
         if(this.x > canvas.width - 10){
             snake.x -= canvas.width;
@@ -50,25 +49,35 @@ function Snake(){
             snake.y += canvas.height;
         }
 
-        
-
     }
 
     this.changeDirection = function(direction){
         switch(direction){
             case 'up':
+                if(this.ySpeed > 0){
+                    break;
+                }
                 this.ySpeed = scale * -1;
                 this.xSpeed = scale * 0;
                 break;
             case 'down':
+                if(this.ySpeed < 0){
+                    break;
+                }
                 this.ySpeed = scale * 1;
                 this.xSpeed = scale * 0;
                 break;
             case 'left':
+                if(this.xSpeed > 0){
+                    break;
+                }
                 this.ySpeed = scale * 0;
                 this.xSpeed = scale * -1;
                 break;
             case 'right':
+                if(this.xSpeed < 0){
+                    break;
+                }
                 this.ySpeed = scale * 0;
                 this.xSpeed = scale * 1;
                 break;
@@ -86,12 +95,27 @@ function Snake(){
             return false;
         }
     }
+
+    this.collision = function(){
+        for(let i = 0; i < this.tail.length; i++){
+            if(this.x === this.tail[i].x && this.y === this.tail[i].y){
+                this.score = 0;
+                this.tail = [];
+            }
+        }
+    }
     
 }
 
 function Apple(){
     this.x = Math.floor(Math.random() * rows - 1) * scale;
     this.y = Math.floor(Math.random() * columns - 1) * scale;
+    if(this.x < 0){
+        this.x = 0;
+    }
+    if(this.y < 0){
+        this.y = 0;
+    }
 
     this.draw = function(){
        ctx.fillStyle = "red";
@@ -99,10 +123,8 @@ function Apple(){
     }
 
     this.update = function(){
-        //Apple Collision
-        if(snake.x === apple.x && snake.y === apple.y){
-           
-        }
+
+        // console.log(this.x, this.y)
     }
 }
 
@@ -120,13 +142,8 @@ window.setInterval(()=>{
     apple.draw();
     snake.update();
     apple.update();
-    if(snake.eat() === true){
-        score++;
-        
-    }
+    document.getElementById("score").innerText = snake.score;
     
-
-
 }, 100)
 
 
