@@ -4,6 +4,13 @@ const scale = 10;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 
+//Sounds
+let eat = new Audio();
+let play = new Audio();
+
+eat.src= "../Extras/eating.mp3"
+play.src="../Extras/play.mp3"
+
 var snake;
 var apple;
 
@@ -82,10 +89,12 @@ function Snake(){
                 this.xSpeed = scale * 1;
                 break;
         }
+        play.play();
     }
 
     this.eat = function(){
         if(snake.x === apple.x && snake.y === apple.y){
+            eat.play();
             this.score++;
             apple = new Apple();
             apple.draw();
