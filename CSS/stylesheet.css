@@ -67,7 +67,7 @@ nav img:hover{
     flex-direction:column;
     max-width:100%;
     color:white;
-    border-bottom: 5px dotted;
+
 }
 
 .projectContainer{
@@ -134,24 +134,19 @@ div div.h3{
 }
 
 footer{
+    height: 80px;
     display:flex;
     justify-content:space-around;
     background-color:black;
     color:white;
 }
 
-footer p{
-    font-size:12px;
-}
 
 div.content{
     width:70%;
     font-size:26px;
 }
 
-div.last{
-    color:white;
-}
 .formContainer {
     width: 30%;
     margin: 0 auto;
