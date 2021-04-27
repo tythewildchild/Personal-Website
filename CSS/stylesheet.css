@@ -71,20 +71,38 @@ nav img:hover{
 }
 
 .projectContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: space-around;
-    flex-wrap: wrap;
-    width:100%;
-    background-color:purple;
+    width: 70%;
+    color:white;
+    display:flex;
+    flex-wrap:wrap;
+    flex:5;
+    padding-top:50px;
+    justify-content:space-between;
 }
 
 .projectContainer div{
     display:flex;
-    width: 30%;
-    height: 200px;
-    background-color: gray;
+    justify-content:center;
+    align-items:center;
+    width:30%;
+    text-decoration:none;
+    margin: 5px;
+    padding:7px 15px;
+    background:teal;
+    border:1px solid #006d6d;
+    border-radius:30px;
+    height:200px;
+    color:white;
+    font-family:Andale Mono;
+    font-size:24px;
+}
+.projectContainer div:hover{
+    cursor: pointer;
+    background-color: coral;
+}
+.projectContainer div a{
+    text-decoration: none;
+    color:white;
 }
 #aboutMe{
     display:none;
