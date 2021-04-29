@@ -141,6 +141,11 @@ footer{
     color:white;
 }
 
+div.photo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 
 div.content{
     width:70%;
