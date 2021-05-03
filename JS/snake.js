@@ -162,11 +162,23 @@ window.addEventListener('keydown', ((evt)=>{
         case 'w':
             direction = 'up';
             break;
+        case 'Up arrow':
+            direction = 'up';
+            break;
         case 'a':
+            direction = 'left';
+            break;
+        case 'Left arrow':
             direction = 'left';
             break;
         case 's':
             direction = 'down';
+            break;
+        case 'Down arrow':
+            direction = 'down';
+            break;
+        case 'Right arrow':
+            direction = 'right';
             break;
         case 'd':
             direction = 'right';

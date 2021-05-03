@@ -129,6 +129,7 @@ div div h1{
 div div.h3{
     font-family:cursive;
     display:flex;
+    width: 60%;
     flex-direction:column;
     align-items:center;
 }
@@ -141,6 +142,11 @@ footer{
     color:white;
 }
 
+div.photo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 
 div.content{
     width:70%;
